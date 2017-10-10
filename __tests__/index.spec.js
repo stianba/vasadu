@@ -27,7 +27,6 @@ describe('vasadu', () => {
     expect(localization.SET_LANGUAGE).toEqual('Cambiar idioma');
   });
 
-  // NOT YET IMPLEMENTED, BUT IT SHOULD THROW!
   it('should throw if locale does not match key in data', () => {
     expect(() => {
       const locale = vasadu(jsonLocalization, 'fr');
