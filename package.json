@@ -5,10 +5,17 @@
   "main": "./lib/vasadu.js",
   "scripts": {
     "prepublish": "npm run build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "coverage": "jest --coverage",
     "build": "npm run build:clean && npm run build:lib && npm run build:flow",
     "build:clean": "rimraf lib",
     "build:lib": "babel -d lib src --ignore '**/__tests__/**'",
     "build:flow": "flow-copy-source -v -i '**/__tests__/**' src lib"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   },
   "repository": {
     "type": "git",
@@ -27,6 +34,7 @@
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-preset-env": "^1.6.0",
     "flow-copy-source": "^1.2.1",
+    "jest": "^21.2.1",
     "rimraf": "^2.6.2"
   },
   "dependencies": {}
