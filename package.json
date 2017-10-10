@@ -1,6 +1,6 @@
 {
   "name": "localizer",
-  "version": "v1.0.0",
+  "version": "v1.0.1",
   "description": "Simple localizer.",
   "main": "./lib/index.js",
   "scripts": {
@@ -12,17 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ludens-reklamebyra/localizer.git"
+    "url": "git+https://github.com/stianba/localizer.git"
   },
-  "keywords": [
-    "localization"
-  ],
+  "keywords": ["localization"],
   "author": "Stian Bakkane",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ludens-reklamebyra/localizer/issues"
+    "url": "https://github.com/stianba/localizer/issues"
   },
-  "homepage": "https://github.com/ludens-reklamebyra/localizer#readme",
+  "homepage": "https://github.com/stianba/localizer#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
