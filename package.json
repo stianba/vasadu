@@ -1,6 +1,6 @@
 {
   "name": "vasadu",
-  "version": "v1.0.3",
+  "version": "v2.0.0",
   "description": "Simple localizer.",
   "main": "./lib/vasadu.js",
   "scripts": {

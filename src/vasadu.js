@@ -1,26 +1,26 @@
 // @flow
-type localizer = { [string]: localizer | string };
+type localeData = { [string]: string };
+type localizerData = { [string]: localeData };
+type localizer = { [string]: string };
 
-function locRecursion(loc: localizer, locale: string): string | localizer {
+function pickLanguageString(loc: localizerData, locale: string): localizer {
+  let localizer: localizer = {};
+
   for (let k in loc) {
     if (loc.hasOwnProperty(k)) {
-      if (typeof loc[k] === 'string') {
-        return ((loc[locale]: any): string);
-      }
-
-      loc[k] = locRecursion(loc[k], locale);
+      localizer[k] = loc[k][locale];
     }
   }
 
-  return loc;
+  return localizer;
 }
 
 /*
 localize takes a localizer data map and extracts the correct localization string based on locale
 */
-function vasadu(data: localizer, locale: string): localizer {
-  return ((locRecursion(data, locale): any): localizer);
+function vasadu(data: localizerData, locale: string): localizer {
+  return pickLanguageString(data, locale);
 }
 
 export default vasadu;
-export type { localizer };
+export type { localeData, localizerData, localizer };
