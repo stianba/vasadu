@@ -1,0 +1,19 @@
+{
+  "menu": {
+    "topLevel": {
+      "no": "Meny",
+      "en": "Menu",
+      "es": "Menú"
+    }
+  },
+  "logIn": {
+    "no": "Logg inn",
+    "en": "Log in",
+    "es": "Iniciar sesión"
+  },
+  "setLanguage": {
+    "no": "Endre språk",
+    "en": "Change language",
+    "es": "Cambiar idioma"
+  }
+}
