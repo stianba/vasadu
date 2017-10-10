@@ -18,9 +18,9 @@ function locRecursion(loc: localizer, locale: string): string | localizer {
 /*
 localize takes a localizer data map and extracts the correct localization string based on locale
 */
-function localize(data: localizer, locale: string): localizer {
+function vasadu(data: localizer, locale: string): localizer {
   return ((locRecursion(data, locale): any): localizer);
 }
 
-export default localize;
+export default vasadu;
 export type { localizer };

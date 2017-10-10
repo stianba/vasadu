@@ -1,6 +1,6 @@
 {
-  "name": "localizer",
-  "version": "v1.0.1",
+  "name": "vasadu",
+  "version": "v1.0.2",
   "description": "Simple localizer.",
   "main": "./lib/index.js",
   "scripts": {
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stianba/localizer.git"
+    "url": "git+https://github.com/stianba/vasadu.git"
   },
   "keywords": ["localization"],
   "author": "Stian Bakkane",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/stianba/localizer/issues"
+    "url": "https://github.com/stianba/vasadu/issues"
   },
-  "homepage": "https://github.com/stianba/localizer#readme",
+  "homepage": "https://github.com/stianba/vasadu#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
