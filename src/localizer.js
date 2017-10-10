@@ -1,13 +1,15 @@
 // @flow
-type localizer = Map<string, localizer | string>;
+type localizer = { [string]: localizer | string };
 
 function locRecursion(loc: localizer, locale: string): string | localizer {
-  for (let [k, v] of loc.entries()) {
-    if (typeof v === 'string') {
-      return ((loc.get('locale'): any): string);
-    }
+  for (let k in loc) {
+    if (loc.hasOwnProperty(k)) {
+      if (typeof loc[k] === 'string') {
+        return ((loc[locale]: any): string);
+      }
 
-    loc.set(k, locRecursion(v, locale));
+      loc[k] = locRecursion(loc[k], locale);
+    }
   }
 
   return loc;
@@ -16,8 +18,8 @@ function locRecursion(loc: localizer, locale: string): string | localizer {
 /*
 localize takes a localizer data map and extracts the correct localization string based on locale
 */
-function localize(data: localizer, locale: string): string | localizer {
-  return locRecursion(data, locale);
+function localize(data: localizer, locale: string): localizer {
+  return ((locRecursion(data, locale): any): localizer);
 }
 
 export default localize;
