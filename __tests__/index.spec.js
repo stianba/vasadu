@@ -19,6 +19,36 @@ const jsonLocalization = {
 };
 
 describe('vasadu', () => {
+  it('should throw if localization object is not an object', () => {
+    expect(() => {
+      vasadu();
+    }).toThrow();
+
+    expect(() => {
+      vasadu('this is not a plain object', 'no');
+    }).toThrow();
+
+    expect(() => {
+      vasadu(['this is also not a plain object'], 'no');
+    }).toThrow();
+
+    expect(() => {
+      vasadu(jsonLocalization, 'no');
+    }).not.toThrow();
+  });
+  it('should throw if locale is not a string', () => {
+    expect(() => {
+      vasadu(jsonLocalization);
+    }).toThrow();
+
+    expect(() => {
+      vasadu(jsonLocalization, 2);
+    }).toThrow();
+
+    expect(() => {
+      vasadu(jsonLocalization, 'no');
+    }).not.toThrow();
+  });
   it('should match with current locale', () => {
     const localization = vasadu(jsonLocalization, 'es');
 

@@ -7,15 +7,13 @@ function pickLanguageString(loc: localizerData, locale: string): localizer {
   let localizer: localizer = {};
 
   for (let k in loc) {
-    if (loc.hasOwnProperty(k)) {
-      if (!loc[k].hasOwnProperty(locale)) {
-        throw new Error(
-          `'${locale}' is not a key in the given localization data.`
-        );
-      }
-
-      localizer[k] = loc[k][locale];
+    if (!loc[k].hasOwnProperty(locale)) {
+      throw new Error(
+        `'${locale}' is not a key in the given localization data.`
+      );
     }
+
+    localizer[k] = loc[k][locale];
   }
 
   return localizer;
@@ -28,6 +26,10 @@ function pickLanguageString(loc: localizerData, locale: string): localizer {
  * the correct localization string based on locale
  */
 function vasadu(data: localizerData, locale: string): localizer {
+  if (typeof data !== 'object' || Array.isArray(data)) {
+    throw new Error('Data is not a proper object.');
+  }
+
   return pickLanguageString(data, locale);
 }
 
