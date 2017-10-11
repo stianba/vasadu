@@ -21,9 +21,12 @@ function pickLanguageString(loc: localizerData, locale: string): localizer {
   return localizer;
 }
 
-/*
-localize takes a localizer data map and extracts the correct localization string based on locale
-*/
+/**
+ * @param {localizerData} data
+ * @param {string} locale
+ * localize takes a localizer data map and extracts 
+ * the correct localization string based on locale
+ */
 function vasadu(data: localizerData, locale: string): localizer {
   return pickLanguageString(data, locale);
 }

@@ -29,15 +29,15 @@ describe('vasadu', () => {
 
   it('should throw if locale does not match key in data', () => {
     expect(() => {
-      const locale = vasadu(jsonLocalization, 'fr');
+      vasadu(jsonLocalization, 'fr');
     }).toThrow();
 
     expect(() => {
-      const locale = vasadu(jsonLocalization, 'se');
+      vasadu(jsonLocalization, 'se');
     }).toThrow();
 
     expect(() => {
-      const locale = vasadu(jsonLocalization, 'no');
+      vasadu(jsonLocalization, 'no');
     }).not.toThrow();
   });
 });
