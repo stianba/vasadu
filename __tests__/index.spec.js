@@ -19,7 +19,7 @@ const jsonLocalization = {
 };
 
 describe('vasadu', () => {
-  it('it should match with current locale', () => {
+  it('should match with current locale', () => {
     const localization = vasadu(jsonLocalization, 'es');
 
     expect(localization.MENU_TOP_LEVEL).toEqual('Menú');
