@@ -1,6 +1,8 @@
 # vasadu
 Simple localizer.
 
+[![Build Status](https://travis-ci.org/stianba/vasadu.svg?branch=master)](https://travis-ci.org/stianba/vasadu)
+
 ```
 $ yarn add vasadu
 ```
